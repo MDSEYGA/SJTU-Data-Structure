@@ -1,0 +1,29 @@
+program AllErrorsCase3;
+var
+   p, q: integer;
+begin
+   p := 30;
+   q := 60;
+
+   then
+      p := p + 2;
+
+   else
+      q := q div 2;
+
+   begin
+      if q > 20 then
+         begin
+            p := p * 2;
+         else
+            q := q - 5;
+	 else
+      end.
+
+   end;
+
+   begin
+      p := q * 3;
+end.
+end;
+end.

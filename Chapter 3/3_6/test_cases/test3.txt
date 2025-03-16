@@ -1,0 +1,37 @@
+program InsaneNestingTest;
+var
+   i, j: integer;
+begin
+   for i := 1 to 3 do
+   begin
+      writeln('Iteration ', i);
+      if i mod 2 = 0 then
+         writeln('Even iteration')
+      else
+      begin
+         for j := 1 to 2 do
+         begin
+            if j = 1 then
+               writeln('Inner loop, first step')
+            else
+            begin
+               if j = 2 then
+               begin
+                  writeln('Inner loop, second step');
+                  if i = 3 then
+                     writeln('Final case')
+                  else
+                  begin
+                     if i = 1 then
+                     begin
+                        writeln('Special case');
+                     end
+                     else
+                        writeln('Middle case');
+                  end;
+               end;
+            end;
+         end;
+      end;
+   end;
+end.

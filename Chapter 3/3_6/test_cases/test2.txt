@@ -1,0 +1,43 @@
+program ComplexProcedureTest;
+var
+   a, b, c integer;
+
+procedure NestedProcedure(x integer);
+begin
+   if x  0 then
+   begin
+      if x mod 2 = 0 then
+         writeln('Even number')
+      else
+      begin
+         if x mod 3 = 0 then
+         begin
+            writeln('Divisible by 3');
+         end
+         else
+         begin
+            writeln('Odd number');
+         end;
+      end;
+   end
+   else
+      writeln('Non-positive number');
+end;
+
+function ComplexFunction(y integer) integer;
+begin
+   if y  0 then
+   begin
+      writeln('Negative number detected');
+      ComplexFunction = -y;
+   end
+   else
+      ComplexFunction = y;
+end;
+
+begin
+   a = 5;
+   b = ComplexFunction(a);
+   NestedProcedure(b);
+   writeln('Test complete');
+end.
